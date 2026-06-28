@@ -40,5 +40,7 @@
  * <p>See {@code Example_BouncingBall.java} for a complete working setup.
  * <p>For increased customizability, {@link com.gbotdays.awtgh.GraphicsProcessor#run()} can be manually edited to include
  * rendering logic that lambda's format can't support.
+ * 
+ * The project's latest version can be found at <a href="https://github.com/SlowGeniei/AWTGH/">this github repo.</a> 
  */
 package com.gbotdays.awtgh;

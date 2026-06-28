@@ -108,7 +108,7 @@ and add them to the recipient project's /src/project/ folder. They will then com
 
 Alternatively, simply copy the files into the working directory of whichever IDE the developer is using.
 
-###Using the .jar
+### Using the .jar
 This github repo contains a pre-compiled .jar file, which can be added to any project using the maven and/or gradle dependencies outlined in the QUICK START section.
 
 Alternatively, a developer can compile the project for themselves by running the following commands:
