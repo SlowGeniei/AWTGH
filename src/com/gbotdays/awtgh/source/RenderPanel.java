@@ -1,4 +1,4 @@
-package com.gbotdays.awtgh.Source;
+package com.gbotdays.awtgh.source;
 
 import java.awt.Dimension;
 import java.awt.Graphics;

@@ -7,11 +7,11 @@
  *
  * <h2>Components</h2>
  * <ul>
- *   <li>{@link com.gbotdays.awtgh.Source.PaintLogic}: a functional interface that defines
+ *   <li>{@link com.gbotdays.awtgh.source.PaintLogic}: a functional interface that defines
  *       per-frame rendering logic. Generally supplied as a lambda.</li>
- *   <li>{@link com.gbotdays.awtgh.Source.GraphicsProcessor}: a dedicated rendering thread
+ *   <li>{@link com.gbotdays.awtgh.source.GraphicsProcessor}: a dedicated rendering thread
  *       that invokes {@code PaintLogic} each frame, producing a {@link java.awt.image.BufferedImage}.</li>
- *   <li>{@link com.gbotdays.awtgh.Source.RenderPanel}: a {@link javax.swing.JPanel} that owns
+ *   <li>{@link com.gbotdays.awtgh.source.RenderPanel}: a {@link javax.swing.JPanel} that owns
  *       a {@code GraphicsProcessor}, displays completed frames, and manages thread
  *       lifecycle alongside its parent window.</li>
  * </ul>
@@ -24,8 +24,8 @@
  * avoiding the need for explicit locking.
  *
  * <h2>Usage</h2>
- * <p>In typical use, only {@link com.gbotdays.awtgh.Source.RenderPanel} and
- * {@link com.gbotdays.awtgh.Source.PaintLogic} are referenced directly.
+ * <p>In typical use, only {@link com.gbotdays.awtgh.source.RenderPanel} and
+ * {@link com.gbotdays.awtgh.source.PaintLogic} are referenced directly.
  * Construct a {@code RenderPanel} with a size, target FPS, and a
  * {@code PaintLogic} lambda, then add it to a {@link javax.swing.JFrame}:
  *
@@ -38,9 +38,9 @@
  * }</pre>
  *
  * <p>See {@code Example_BouncingBall.java} for a complete working setup.
- * <p>For increased customizability, {@link com.gbotdays.awtgh.Source.GraphicsProcessor#run()} can be manually edited to include
+ * <p>For increased customizability, {@link com.gbotdays.awtgh.source.GraphicsProcessor#run()} can be manually edited to include
  * rendering logic that lambda's format can't support.
  * 
  * The project's latest version can be found at <a href="https://github.com/SlowGeniei/AWTGH/">this github repo.</a> 
  */
-package com.gbotdays.awtgh.Source;
+package com.gbotdays.awtgh.source;

@@ -159,9 +159,11 @@ Alternatively, a developer can compile the project for themselves by running the
 ```bash
 git clone https://github.com/TODO/awtgh.git
 cd awtgh
-javac -d out src/com/gbotdays/awtgh/*.java
+javac -d out src/com/gbotdays/awtgh/source*.java
 jar cf awtgh-custom.jar -C out .
 ```
+
+Note: compiling '''src/com/gbotdays/awtgh/*.java''' would include example implementation classes.
 
 The developer can then add the same dependencies as the first option, but with "system" as its scope and a new "systemPath" pair that points to the .jar.
 

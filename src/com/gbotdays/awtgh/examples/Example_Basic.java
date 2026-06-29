@@ -1,11 +1,11 @@
-package com.gbotdays.awtgh.Examples;
+package com.gbotdays.awtgh.examples;
 
 import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 
-import com.gbotdays.awtgh.Source.RenderPanel;
+import com.gbotdays.awtgh.source.RenderPanel;
 
 /**
  * A basic example class that showcases
