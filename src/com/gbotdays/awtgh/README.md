@@ -7,17 +7,61 @@ A lightweight off-EDT rendering engine for Swing. AWTGH drives a `JPanel` from a
 ## Quick Start
 
 **Add the dependency:**
+This project is currently only published to github packages. To encorporate the tool into a project, the developer must:
 
-Maven:
+### For Maven
+Add
 ```xml
-//TODO
+<settings>
+  <servers>
+    <server>
+      <id>AWTGH</id>
+      <username>GITHUB_USER</username>
+      <password>GITHUB_PAT_TOKEN</password>
+    </server>
+  </servers>
+</settings>
 ```
+to the project's "~/.m2/settings.xml", and
+```xml
+<repositories>
+  <repository>
+    <id>github-yourrepo</id>
+    <url>https://maven.pkg.github.com/OWNER/REPO</url>
+  </repository>
+</repositories>
 
-Gradle:
+<dependencies>
+  <dependency>
+    <groupId>com.yourgroup</groupId>
+    <artifactId>your-artifact</artifactId>
+    <version>1.0.0</version>
+  </dependency>
+</dependencies>
+```
+in the project's "pom.xml" file.
+
+### For Gradle
+Add
 ```groovy
-//TODO
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/OWNER/REPO")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+        }
+    }
+}
 ```
+to the project's "build.gradle" file, and
+```properties
+gpr.user=GITHUB_USER
+gpr.key=GITHUB_PAT_TOKEN
+```
+to the project's "~/.gradle/gradle.properties".
 
+### The implementation code (For both Gradle and Maven)
 **Create a `RenderPanel` and call `start()`:**
 
 ```java
