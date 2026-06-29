@@ -1,3 +1,6 @@
+//File under MIT license.
+//For details, see file "~/LICENSE" in github repo "https://github.com/SlowGeniei/AWTGH"
+
 package com.gbotdays.awtgh.examples;
 
 import java.awt.BasicStroke;

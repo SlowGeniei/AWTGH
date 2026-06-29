@@ -1,3 +1,6 @@
+//File under MIT license.
+//For details, see file "~/LICENSE" in github repo "https://github.com/SlowGeniei/AWTGH"
+
 /**
  * A lightweight off-EDT rendering engine for Swing applications.
  *

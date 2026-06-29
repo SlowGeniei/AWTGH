@@ -184,4 +184,5 @@ dependencies {
 
 ## License
 
-> TODO: Add license.
+This project is under the MIT license.
+See LICENSE file located at the repo's root for details.
