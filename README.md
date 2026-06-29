@@ -26,16 +26,16 @@ to the project's "~/.m2/settings.xml", and
 ```xml
 <repositories>
   <repository>
-    <id>github-yourrepo</id>
-    <url>https://maven.pkg.github.com/OWNER/REPO</url>
+    <id>AWTGH</id>
+    <url>https://maven.pkg.github.com/SlowGeniei/AWTGH</url>
   </repository>
 </repositories>
 
 <dependencies>
   <dependency>
-    <groupId>com.yourgroup</groupId>
-    <artifactId>your-artifact</artifactId>
-    <version>1.0.0</version>
+    <groupId>com.gbotdays</groupId>
+    <artifactId>awtgh</artifactId>
+    <version>0.1.0</version>
   </dependency>
 </dependencies>
 ```
@@ -46,7 +46,7 @@ Add
 ```groovy
 repositories {
     maven {
-        url = uri("https://maven.pkg.github.com/OWNER/REPO")
+        url = uri("https://maven.pkg.github.com/SlowGeniei/AWTGH")
         credentials {
             username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_ACTOR")
             password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
@@ -157,7 +157,7 @@ This github repo contains a pre-compiled .jar file, which can be added to any pr
 
 Alternatively, a developer can compile the project for themselves by running the following commands:
 ```bash
-git clone https://github.com/TODO/awtgh.git
+git clone https://github.com/SlowGeniei/awtgh.git
 cd awtgh
 javac -d out src/com/gbotdays/awtgh/source*.java
 jar cf awtgh-custom.jar -C out .
