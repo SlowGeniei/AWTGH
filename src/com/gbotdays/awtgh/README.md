@@ -163,10 +163,25 @@ javac -d out src/com/gbotdays/awtgh/source*.java
 jar cf awtgh-custom.jar -C out .
 ```
 
-The developer can then add the same dependencies as the first option, but with "system" as its scope and a new "systemPath" pair that points to the .jar.
+A developer can add this .jar to a project using, for Maven
+```xml
+<dependency>
+    <groupId>com.gbotdays</groupId>
+    <artifactId>awtgh</artifactId>
+    <version>0.1.0</version>
+    <scope>system</scope>
+    <systemPath>${project.basedir}/lib/awtgh-custom.jar</systemPath>
+</dependency>
+```
+or, for Gradle:
+```groovy
+dependencies {
+    implementation files('lib/awtgh-custom.jar')
+}
+```
 
 ---
-ddasdfasdfas
+
 ## License
 
 > TODO: Add license.
