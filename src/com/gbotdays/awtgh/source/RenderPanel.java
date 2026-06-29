@@ -108,10 +108,14 @@ public class RenderPanel extends JPanel {
 	
     /**
      * Safely stops the {@link GraphicsProcessor} rendering thread.
+     * The {@link #graphicsProcessor} null check is in place in case
+     * the user doesn't call {@code start()}.
      * <p>
      * Calling {@link GraphicsProcessor#stop()} would discard the current frame.
      */
-	public void stop () {graphicsProcessor.stopThread();}
+	public void stop () {
+		if (graphicsProcessor != null) {graphicsProcessor.stopThread();}
+	}
 	
 	/**
 	 * Creates a new {@link GraphicsProcessor} instance and starts the rendering thread.

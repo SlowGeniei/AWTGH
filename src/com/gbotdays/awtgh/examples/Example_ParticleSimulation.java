@@ -41,7 +41,7 @@ import com.gbotdays.awtgh.source.RenderPanel;
  * <p>The window handles resizing gracefully.
  */
 public class Example_ParticleSimulation {
-
+	
     private static final int    PARTICLE_COUNT  = 600;
     private static final double SPEED_LIMIT     = 6.0;
     private static final double FORCE_RADIUS    = 180.0;
