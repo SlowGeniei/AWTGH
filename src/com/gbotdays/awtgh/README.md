@@ -163,7 +163,7 @@ javac -d out src/com/gbotdays/awtgh/source*.java
 jar cf awtgh-custom.jar -C out .
 ```
 
-A developer can add this .jar to a project using, for Maven
+A developer can add this .jar to a project using, for Maven:
 ```xml
 <dependency>
     <groupId>com.gbotdays</groupId>
